@@ -1,0 +1,318 @@
+<html>
+<head>
+    <style>
+        :root {
+            --bg-dark: #120b1e;
+            --surface-color: #1d142b;
+            --primary-accent: #c084fc;
+            --secondary-accent: #e9c46a;
+            --cream-soft: #fff5e6;
+            --cream-muted: #d9d2c5;
+            --border: #3b1c5a;
+            --font-gothic: "Century Gothic", "Apple Gothic", "AppleGothic", "Futura", "Inter", sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--cream-soft);
+            font-family: var(--font-gothic);
+            margin: 40px auto;
+            max-width: 900px;
+            padding: 0 20px;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-weight: normal;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 42px;
+            color: var(--cream-soft);
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 0px var(--border);
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-top: 50px;
+            border-bottom: 1px solid var(--secondary-accent);
+            padding-bottom: 10px;
+            color: var(--secondary-accent);
+        }
+
+        p {
+            font-size: 16px;
+            color: var(--cream-muted);
+        }
+
+        a {
+            color: var(--primary-accent);
+            text-decoration: none;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: var(--cream-soft);
+            text-decoration: underline;
+        }
+
+        img {
+            display: block;
+            margin: 40px auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 2px solid var(--surface-color);
+            outline: 1px solid var(--cream-soft);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: var(--surface-color);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        th, td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            background-color: #2a1e3d;
+            color: var(--cream-soft);
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        form {
+            background: var(--surface-color);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid var(--cream-soft);
+            box-shadow: inset 0 0 15px rgba(255, 245, 230, 0.05);
+        }
+
+        .form-section {
+            border: none;
+            margin-bottom: 30px;
+            padding: 0;
+        }
+
+        .form-section legend {
+            font-size: 20px;
+            color: var(--cream-soft);
+            margin-bottom: 15px;
+            padding: 0 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: bold;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 12px;
+            color: var(--cream-muted);
+            margin-bottom: 5px;
+            margin-top: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        input[type="text"], 
+        input[type="email"], 
+        input[type="number"], 
+        input[type="date"], 
+        textarea {
+            width: 100%;
+            background: #2a1e3d;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 12px;
+            color: var(--cream-soft);
+            font-size: 15px;
+            font-family: var(--font-gothic);
+            box-sizing: border-box;
+            transition: all 0.3s;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--cream-soft);
+            background: #33254a;
+        }
+
+        .selection-group {
+            margin-top: 10px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .selection-group label {
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+            margin: 0;
+            color: var(--cream-soft);
+            text-transform: none;
+            letter-spacing: 0;
+            font-size: 15px;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 8px;
+            accent-color: var(--primary-accent);
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        button {
+            background-color: var(--secondary-accent);
+            color: var(--bg-dark);
+            border: none;
+            padding: 15px 30px;
+            font-family: var(--font-gothic);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.3s;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: var(--cream-soft);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Pure HTML Practice Page</h1>
+<p style="text-align: center;">This page is written in pure HTML only. As a student, your task is to improve its appearance using CSS.</p>
+<hr style="border: 0; height: 1px; background: var(--secondary-accent); margin: 40px 0; opacity: 0.3;"/>
+
+<h2>About This Page</h2>
+<p>This webpage is intentionally simple because it serves as a starting point for CSS practice. By using variables and a grid system, we can turn raw HTML into a professional interface.</p>
+
+<h2>Topics Covered</h2>
+<ul>
+    <li>Headings and paragraphs</li>
+    <li>Links</li>
+    <li>Images</li>
+    <li>Lists</li>
+    <li>Tables</li>
+    <li>Forms and input types</li>
+</ul>
+
+<h2>Image Section</h2>
+<img src="https://picsum.photos/400/600" width="400" height="600"/>
+
+<h2>Sample Table</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Topic</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Headings</td>
+            <td>Used to organize titles and section labels.</td>
+        </tr>
+        <tr>
+            <td>Paragraphs</td>
+            <td>Used to write blocks of text content.</td>
+        </tr>
+        <tr>
+            <td>Images</td>
+            <td>Used to display pictures inside the page.</td>
+        </tr>
+        <tr>
+            <td>Forms</td>
+            <td>Used to collect user input from visitors.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Sample Form</h2>
+
+<form action="https://formspree.io/f/allyssamhay.salazar.mnl@eac.edu.ph" method="POST">
+    <fieldset class="form-section">
+        <legend>Personal Information</legend>
+        <div class="grid-container">
+            <div>
+                <label>Full Name:</label>
+                <input type="text" name="full_name" placeholder="Allyssa Salazar" required>
+            </div>
+            <div>
+                <label>Email Address:</label>
+                <input type="email" name="email" placeholder="allyssa@gmail.com" required>
+            </div>
+            <div>
+                <label>Age:</label>
+                <input type="number" name="age">
+            </div>
+            <div>
+                <label>Birthdate:</label>
+                <input type="date" name="birthdate">
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset class="form-section">
+        <legend>Learning Preferences</legend>
+        
+        <label>Preferred Topic:</label>
+        <div class="selection-group">
+            <label><input type="radio" name="preferred_topic" value="HTML"> HTML</label>
+            <label><input type="radio" name="preferred_topic" value="Forms"> Forms</label>
+            <label><input type="radio" name="preferred_topic" value="Tables"> Tables</label>
+        </div>
+
+        <label>Skills to Practice:</label>
+        <div class="selection-group">
+            <label><input type="checkbox" name="skills" value="Headings"> Headings</label>
+            <label><input type="checkbox" name="skills" value="Images"> Images</label>
+            <label><input type="checkbox" name="skills" value="Forms"> Forms</label>
+        </div>
+    </fieldset>
+
+    <fieldset class="form-section">
+        <legend>Feedback</legend>
+        <label>Comments:</label>
+        <textarea name="comments" placeholder="Tell us what you think..."></textarea>
+    </fieldset>
+
+    <button type="submit">Submit Answers</button>
+</form>
+
+<div style="text-align: center; margin-top: 50px;">
+    <p><a href="#top">↑ Back to top</a></p>
+</div>
+
+</body>
+</html>
